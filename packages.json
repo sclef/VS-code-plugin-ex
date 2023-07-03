@@ -1,0 +1,32 @@
+{
+    "displayName": "file-creator",
+    "publisher": "sclef",
+    "icon": "icon.png",
+    "homepage": "https://github.com/sclef/VS-code-plugin-ex#readme",
+    "categories": [
+      "Other",
+      "Languages", 
+      "Snippets"
+    ],
+    "activationEvents": [
+        "onCommand:VS-code-plugin-ex.convert"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [{
+          "command": "VS-code-plugin-ex.convert",
+          "title": "VS Code example, that creates new file next to opened one"
+        }]
+    },
+    "configuration": {
+        "type": "object",
+        "title": "VS Code example configuration",
+        "properties": {
+            "VS-code-plugin-ex.transforms": {
+                "type": "object",
+                "default": {},
+                "description": "Creates new file next to opened one."
+            }
+        }
+    }
+  }
